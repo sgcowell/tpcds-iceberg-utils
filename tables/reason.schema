@@ -1,0 +1,3 @@
+r_reason_sk|identifier|N
+r_reason_id|char(16)|N
+r_reason_desc|char(100)|

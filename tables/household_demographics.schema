@@ -1,0 +1,5 @@
+hd_demo_sk|identifier|N
+hd_income_band_sk|identifier|
+hd_buy_potential|char(15)|
+hd_dep_count|integer|
+hd_vehicle_count|integer|

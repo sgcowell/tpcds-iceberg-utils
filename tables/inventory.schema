@@ -1,0 +1,4 @@
+inv_date_sk|identifier|N
+inv_item_sk|identifier|N
+inv_warehouse_sk|identifier|N
+inv_quantity_on_hand|integer|

@@ -1,0 +1,10 @@
+t_time_sk|identifier|N
+t_time_id|char(16)|N
+t_time|integer|N
+t_hour|integer|
+t_minute|integer|
+t_second|integer|
+t_am_pm|char(2)|
+t_shift|char(20)|
+t_sub_shift|char(20)|
+t_meal_time|char(20)|
