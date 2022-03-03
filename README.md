@@ -10,7 +10,7 @@ To create Iceberg tables on top of a TPC-DS dataset:
 
 For example, if I want to create my Iceberg tables under ~/warehouse/tpcds, and I will register that location as a catalog in Spark as 'tpcds':
 
-./gen-create-tables-script.sh tpcds <path-to-tpcds-data-files> > tpcds.sql
+./gen-create-tables-script.sh tpcds /path/to/tpcds/files > tpcds.sql
 
 You can then run the script in Spark using something like:
 
