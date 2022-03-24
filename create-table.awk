@@ -43,10 +43,11 @@ BEGIN {
 END {
     if (partition_spec != "UNPARTITIONED") {
         partitioned_by = " PARTITIONED BY (" partition_spec ")"
+        distributed_by = " DISTRIBUTE BY " partition_spec
     }
     create_table_sql = create_table_sql "\n) USING iceberg" partitioned_by " TBLPROPERTIES (" tblproperties ");\n" 
     create_source_csv_table_sql = create_source_csv_table_sql "\n) USING csv\nOPTIONS ( header false, delimiter '|' )\nLOCATION '" source_csv_path "';\n"
-    insert_sql = insert_sql "\nFROM " csv_table_name ";\n"
+    insert_sql = insert_sql "\nFROM " csv_table_name distributed_by ";\n"
     
     print "-- " table_name "\n"
     print drop_table_sql

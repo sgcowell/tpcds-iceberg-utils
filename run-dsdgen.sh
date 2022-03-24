@@ -1,12 +1,13 @@
 #!/bin/zsh
 
 SCRIPTDIR=${0:a:h}
-SF=10
-OUTDIR=~/warehouse/tpcds/text/sf$SF
+SF=100
+OUTDIR=/mnt/data/tpcds/text/sf$SF
+TPCDSTOOLSDIR=~/dev/tpcds/tpcds-kit/tools
 
-pushd $SCRIPTDIR/../tpcds-kit/tools
-mkdir $OUTDIR
-./dsdgen -scale $SF -f -dir $OUTDIR -terminate n
+pushd $TPCDSTOOLSDIR
+mkdir -p $OUTDIR
+./dsdgen -scale $SF -f -dir $OUTDIR -terminate n -verbose y
 popd
 
 # gen query cmd for ref...
